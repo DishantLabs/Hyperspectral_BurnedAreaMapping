@@ -35,6 +35,5 @@ scripts/            inspect_hdf5, download_data
 
 ## Notes on the data
 Prefer **surface reflectance** scenes for the cleanest matches. Water-vapor bands
-(~1350–1450, ~1800–1950 nm) are masked by default — they're noisy in VSWIR and
-would pollute similarity. Verify the STAC catalog URL in `scripts/download_data.py`
-against Planet's open-data page before relying on auto-download.
+(~1350–1450, ~1800–1950 nm) are masked by default as they're noisy in VSWIR and
+would pollute similarity.
