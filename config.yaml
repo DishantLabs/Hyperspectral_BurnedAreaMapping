@@ -1,0 +1,28 @@
+# Path to a Tanager HDF5 scene (surface reflectance recommended)
+scene_path: data/scene.h5
+
+# Internal HDF5 paths. Leave null to auto-detect (largest 3D dataset for the cube;
+# wavelengths auto-found from datasets or attributes by VSWIR value range).
+# Override after running `python scripts/inspect_hdf5.py <file>`.
+cube_dataset: null
+wavelength_dataset: null
+
+# Sentinel value marking bad/no-data pixels in the cube.
+bad_value: -9999
+
+# Target wavelengths (nm) used to build the RGB preview composite.
+rgb_bands: [640, 550, 470]
+
+# Spectra normalization before search: none | brightness (L2) | continuum
+normalize: brightness
+
+# Water-vapor / noisy regions (nm) dropped before matching.
+drop_band_ranges:
+  - [1350, 1450]
+  - [1800, 1950]
+
+search:
+  sam_threshold_deg: 5.0   # default class similarity threshold (spectral angle)
+
+# Ground sample distance (m) per pixel, used for area computation. Tanager ~30 m.
+pixel_size_m: 30

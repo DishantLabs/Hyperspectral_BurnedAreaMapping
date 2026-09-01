@@ -1,0 +1,9 @@
+numpy>=1.24
+h5py>=3.9
+pyyaml>=6.0
+matplotlib>=3.7
+streamlit>=1.30
+streamlit-image-coordinates>=0.1.6
+# optional, only for scripts/download_data.py (STAC access):
+pystac-client>=0.7
+requests>=2.31
